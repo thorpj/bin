@@ -1,3 +1,4 @@
+source ./"include.sh"
 
 line_exists ()
 {
