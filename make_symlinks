@@ -1,0 +1,23 @@
+source_dir="/mnt/nasshare"
+
+make_symlink ()
+{
+    target_dir=${1%/*}
+
+    echo $target_path
+    for d in "$source_dir"/*/; do
+        d=${d#*$source_dir/}
+        d=${d%/*}
+        #echo $d
+        #echo "$target_dir/$d"
+        #echo "$source_dir/$d"
+        #continue
+        if [ ! -L "$target_dir/$d" ] && [ ! -d "$target_dir/$d" ]; then
+            ln -s "$source_dir/$d" "$target_dir/$d"
+        fi
+    done
+}
+
+for home_path in /home/*/; do
+    make_symlink "$home_path"
+done
