@@ -44,7 +44,7 @@ check_hash = yes
 
 # Global upload and download rate in KiB (0 for unlimited)
 upload_rate = 400
-download_rate = 1220.7
+download_rate = 1220
 
 # Port range to use for listening.
 port_range = 55020-55025
@@ -107,7 +107,7 @@ system.file.allocate.set = yes
 #max_memory_usage = 4000M
 
 # Set the umask for this process, which is applied to all files created by the program
-umask = 0660
+system.umask.set = 0660
 
 # Changes the working directory of the process using chdir
 #working_directory = directory
