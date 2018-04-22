@@ -8,7 +8,7 @@ cd ~/steam
 wget http://media.steampowered.com/installer/steamcmd_linux.tar.gz
 tar zxf steamcmd_linux.tar.gz
 
-~/steam/steamcmd.sh +runscript steamcmd_cmw.txt
+~/steam/steamcmd.sh +runscript ~/bin/init/games/cmw/steamcmd_cmw.txt
 
 cp steam/linux32/steamclient.so cmw/Binaries/Linux/lib
 echo 219640 > ~/cmw/Binaries/Linux/steam_appid.txt
