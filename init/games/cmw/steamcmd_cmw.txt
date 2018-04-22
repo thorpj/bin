@@ -2,5 +2,5 @@
 @NoPromptForPassword 1
 login anonymous 
 force_install_dir ../cmw
-app_update 219640 validate
+app_update 220070 validate
 quit
