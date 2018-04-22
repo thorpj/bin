@@ -1,0 +1,1 @@
+wget https://github.com/nzbget/nzbget/releases/download/v19.1/nzbget-19.1-bin-linux.run
