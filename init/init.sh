@@ -1,8 +1,8 @@
 cd "$HOME/bin"
-source ./"include.sh"
-source helpers/*
+source "init/include.sh"
+source "init/helpers/"*
 
-source ./"bash_init.sh"
+source "init/bash_init.sh"
 for d in $HOME/bin/*; do
     chmod +x $d
 done
