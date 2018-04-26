@@ -1,3 +1,4 @@
+cd "$HOME/bin"
 source ./"include.sh"
 source helpers/*
 

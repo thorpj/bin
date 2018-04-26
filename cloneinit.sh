@@ -6,8 +6,10 @@ for package in "${packages[@]}"; do
     sudo apt -y install $package
 done
 
-git clone git@github.com:thorpj/bin.git $HOME/bin
-bash $HOME/bin/init/init.sh
+if [ ! -d "$HOME/bin" ]; then
+    git clone git@github.com:thorpj/bin.git $HOME/bin
+    bash $HOME/bin/init/init.sh
+fi
 
 read -p "new username (can be blank): "
 if [ ! -z "$username" ]; then
