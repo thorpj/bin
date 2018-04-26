@@ -15,7 +15,8 @@ fi
 bash $HOME/bin/init/init.sh
 
 
-read -p "new username (can be blank): "
+read -p "new username (can be blank): " username
+sudo adduser "$username"
 if [ ! -z "$username" ]; then
     sudo cp $HOME/.vimrc /home/$username
     sudo cp -r $HOME/.tmux* /home/$username
