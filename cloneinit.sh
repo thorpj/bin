@@ -20,7 +20,7 @@ if [ ! -z "$username" ]; then
     sudo cp $HOME/.vimrc /home/$username
     sudo cp -r $HOME/.tmux* /home/$username
     sudo cp $HOME/.bashrc /home/$username
-    
+
     sudo chown "$username:$username" /home/$username/.vimrc
     sudo chown -R "$username:$username" /home/$username/.tmux*
     sudo chown "$username:$username" /home/$username/.bashrc
@@ -33,7 +33,8 @@ sudo service hostname start
 sudo sed -i 's/template.yunolan.me/'$hostname'.yunolan.me/g' /etc/hosts
 sudo sed -i 's/template/'$hostname'/g' /etc/hosts
 
-sudo vim /etc/network/interfaces
+read -p "ip: " ip
+sudo sed -i 's/[replaceip]/'$ip'/g' /etc/network/interfaces
 
 
 
