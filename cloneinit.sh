@@ -8,8 +8,12 @@ done
 
 if [ ! -d "$HOME/bin" ]; then
     git clone git@github.com:thorpj/bin.git $HOME/bin
-    bash $HOME/bin/init/init.sh
+else
+    cd $HOME/bin
+    bash reset_to_master
 fi
+bash $HOME/bin/init/init.sh
+
 
 read -p "new username (can be blank): "
 if [ ! -z "$username" ]; then
