@@ -38,7 +38,7 @@ sudo sed -i 's/template/'$hostname'/g' /etc/hosts
 
 read -p "ip: " ip
 sudo cp "$HOME/bin/init/networking" /etc/network/interfaces.d
-sudo sed -i 's/[replaceip]/'$ip'/g' /etc/network/interfaces.d/networking
+sudo sed -i 's/172.20.10.133/'$ip'/g' /etc/network/interfaces.d/networking
 
 
 
