@@ -1,10 +1,11 @@
 sudo apt update
 sudo apt upgrade -y
 sudo apt dist-upgrade -y
-packages=("git" "curl" "nfs-common" "puppet-agent")
+packages=("git" "curl" "nfs-common" "puppet-common" "smbclient")
 for package in "${packages[@]}"; do
     sudo apt -y install $package
 done
+
 
 sudo /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true
 
